@@ -181,7 +181,7 @@ header{
 }
 
 .works-wrapper{
-  padding-bottom: 10px;
+  padding-bottom: 90px;
   padding-left: 5%;
   padding-right: 5%;
   background-color: #f7f7f7;
@@ -192,10 +192,47 @@ header{
   color: #605d60;
 }
 
-/*ここからおみくじ*/
-#btn-wrapper{
-  padding: 20px;
+@keyframes wave {
+  100% {
+    transform: translate3d(0, -10px, 0);
+  }
 }
+
+.wave {
+  display: block;
+  width: 150px;
+  margin: 20px auto 0;
+  text-align: center;
+  cursor: default;
+  margin-bottom: 20px;
+}
+
+.wave span {
+  display: inline-block;
+  color: #b3aeb5;
+  font-size: 24px;
+}
+
+.wave:hover span {
+  animation-name: wave;
+  animation-duration: .2s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+.wave:hover span:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.wave:hover span:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.wave:hover span:nth-child(4) {
+  animation-delay: .3s;
+}
+
+/*ここからおみくじ*/
 
 #btn{
   width: 200px;
@@ -206,12 +243,12 @@ header{
   text-align: center;
   line-height: 200px;
   color: #ffffff;
-  font-weight: bold;
-  font-size: 32px;
+  font-size: 27px;
+  letter-spacing: 3px;
   cursor: pointer;
   box-shadow: 0 10px #a7a7a7;
   user-select: none;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 
 #btn:hover{
@@ -224,6 +261,27 @@ header{
   top:5px;
 }
 /*ここまでおみくじ*/
+
+/* ここからストップウォッチ */
+@font-face {
+  font-family: 'DSEG';
+  src: url('./DSEG7-Classic/DSEG7Classic-Regular.ttf');
+}
+
+#time{
+  font-family: 'DSEG';
+}
+/* ここまでストップウォッチ */
+
+/* ここからタイピングゲーム */
+#characters{
+  font-size: 2rem;
+}
+
+#typed{
+  color: red;
+}
+/* ここまでタイピングゲーム */
 
 .contact-wrapper{
   padding-bottom: 60px;
