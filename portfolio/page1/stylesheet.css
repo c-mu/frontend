@@ -268,17 +268,17 @@ header{
   src: url('./DSEG7-Classic/DSEG7Classic-Regular.ttf');
 }
 
-#time{
+#time {
   font-family: 'DSEG';
 }
 /* ここまでストップウォッチ */
 
 /* ここからタイピングゲーム */
-#characters{
+#characters {
   font-size: 2rem;
 }
 
-#typed{
+#typed {
   color: red;
 }
 /* ここまでタイピングゲーム */
