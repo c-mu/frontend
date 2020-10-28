@@ -31,6 +31,7 @@ const start = document.getElementById('start');
 const reset = document.getElementById('reset');
 const result = document.getElementById('result');
 
+// ▼キー打たれたら1個ずつ赤にする
 const typedField = document.getElementById('typed');
 const untypedField = document.getElementById('untyped');
 
@@ -91,32 +92,32 @@ function updateTime(){
     const mStr = m.toString().padStart(2,'0');
     const hStr = h.toString().padStart(2,'0');
 
-    timeElement.innerHTML=`${hStr}:${mStr}:${sStr}.${msStr}`;
+    timeElement.innerHTML = `${hStr}:${mStr}:${sStr}.${msStr}`;
 }
 
-function keyDownCallback(e){
-    if(e.key !== untyped.substring(0,1)){
+function keyDownCallback(e) {
+    if(e.key !== untyped.substring(0, 1)) {
         missTypeCount += 1;
         return;
     }
     successTypeCount += 1;
-    typed += untyped.substring(0,1);
+    typed += untyped.substring(0, 1);
     untyped = untyped.substring(1);
 
     updateTextField();
 
-    if(untyped === ''){
+    if (untyped === '') {
         next();
     }
 }
 
-function gameStart(){
+function gameStart() {
     let pre = new Date();
-    intervalId = setInterval(function(){
+    intervalId = setInterval(function() {
         const now = new Date();
         remaining -= now - pre;
 
-        if(remaining < 0){
+        if(remaining < 0) {
             gameEnd();
         }
 
@@ -124,7 +125,7 @@ function gameStart(){
         updateTime();
     }, 10);
 
-    document.addEventListener('keydown',keyDownCallback);
+    document.addEventListener('keydown', keyDownCallback);
 
     next();
 }
@@ -134,8 +135,8 @@ function gameEnd(){
     updateTime();
     clearInterval(intervalId);
     intervalId = null;
-    document.removeEventListener('keydown',keyDownCallback);
-    result.textContent = `【ミスタイプ数：${missTypeCount}】【総タイプ数：${missTypeCount + successTypeCount}】リセットボタンを押してね(^_−)−☆`;
+    document.removeEventListener('keydown', keyDownCallback);
+    result.textContent = `【ミスタイプ数：${missTypeCount}】 【総タイプ数：${missTypeCount + successTypeCount}】 リセットボタンを押してね(^_−)−☆`;
 }
 
 // 残り時間のミリ秒
@@ -143,12 +144,12 @@ let remaining = time;
 
 let intervalId = null;
 
-start.addEventListener('click',function(e){
-    if(intervalId !== null){return;}
+start.addEventListener('click', function(e) {
+    if (intervalId !== null) { return; }
     gameStart();
 });
 
-reset.addEventListener('click',function(e){
+reset.addEventListener('click', function(e) {
     document.removeEventListener('keydown',keyDownCallback);
 
     clearInterval(intervalId);
