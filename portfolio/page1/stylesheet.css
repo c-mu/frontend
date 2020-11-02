@@ -3,8 +3,8 @@
 }
 
 body{
-  margin:0;
-  font-family:"Hiragino Kaku Gothic ProN", sans-serif;
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
 }
 
 a{
@@ -12,23 +12,23 @@ a{
 }
 
 .clear{
-  clear:left;
+  clear: left;
 }
 
 header{
-  height:65px;
-  width:100%;
-  background-color:rgba(51,51,51,0.9);
-  position:fixed;
-  top:0;
-  z-index:10;
+  height: 65px;
+  width: 100%;
+  background-color: rgba(51,51,51,0.9);
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .container{
   max-width: 1170px;
-  width:100%;
-  padding:0 15px;
-  margin:0 auto;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header-left{
@@ -38,7 +38,7 @@ header{
 .header-logo{
   width: 124px;
   margin-top: 6px;
-  font-size:36px;
+  font-size: 36px;
   color: white;
 }
 
@@ -73,8 +73,8 @@ header{
 }
 
 .top-wrapper{
-  padding:280px 0 200px 0;
-  text-align:center;
+  padding: 260px 0 200px 0;
+  text-align: center;
 }
 
 .top_image{
@@ -89,7 +89,7 @@ header{
 }
 
 .heading{
-  padding-top: 50px;
+  padding-top: 75px;
   padding-bottom: 50px;
   color: #5d5f60;
 }
@@ -126,10 +126,7 @@ header{
 }
 
 .message-wrapper{
-  border-bottom: 1px solid #eee;
   padding-bottom: 10px;
-  text-align: center;
-  /* background-color: #f7f7f7; */
 }
 
 .message-wrapper ul{
@@ -172,16 +169,16 @@ header{
 }
 
 .txt-contents{
-  width:70%;
-  display:inline-block;
-  margin:20px;
-  font-size:13px;
-  color:#b3aeb5;
-  height:100px;
+  width: 70%;
+  display: inline-block;
+  margin: 20px;
+  font-size: 13px;
+  color: #b3aeb5;
+  height: 100px;
 }
 
 .works-wrapper{
-  padding-bottom: 90px;
+  padding-bottom: 50px;
   padding-left: 5%;
   padding-right: 5%;
   background-color: #f7f7f7;
@@ -189,7 +186,15 @@ header{
 }
 
 .works_description{
+  margin-top: 110px;
   color: #605d60;
+}
+
+.wors-details{
+  padding-left: 5%;
+  padding-right: 5%;
+  float: left;
+  width: 25%;
 }
 
 @keyframes wave {
@@ -233,7 +238,6 @@ header{
 }
 
 /*ここからおみくじ*/
-
 #btn{
   width: 200px;
   height: 200px;
@@ -257,23 +261,25 @@ header{
 
 #btn:active{
   box-shadow: 0 5px #a7a7a7;
-  position:relative;
-  top:5px;
+  position: relative;
+  top: 5px;
 }
 /*ここまでおみくじ*/
 
-/* ここからストップウォッチ */
+/* ここからストップウォッチ付きタイピングゲーム */
+.typing-game {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'DSEG';
-  src: url('./DSEG7-Classic/DSEG7Classic-Regular.ttf');
+  src: url('works/typing-game/DSEG7-Classic/DSEG7Classic-Regular.ttf');
 }
 
 #time {
   font-family: 'DSEG';
 }
-/* ここまでストップウォッチ */
 
-/* ここからタイピングゲーム */
 #characters {
   font-size: 2rem;
 }
@@ -281,7 +287,7 @@ header{
 #typed {
   color: red;
 }
-/* ここまでタイピングゲーム */
+/* ここまでストップウォッチ付きタイピングゲーム */
 
 .contact-wrapper{
   padding-bottom: 60px;
@@ -299,7 +305,7 @@ header{
 }
 
 .mail{
-  margin-right:40px;
+  margin-right: 40px;
 }
 
 .contact-icon i{
@@ -312,7 +318,7 @@ header{
 }
 
 .twitter{
-  margin-right:40px;
+  margin-right: 40px;
 }
 
 footer{
